@@ -1,0 +1,91 @@
+﻿<div id="main" class="row">
+    <div class="col-md-8">
+        <div class="row principal">
+            <div class="col-md-3 userlist">
+                <ul class="people">
+                    <li class="person">
+                        <a href="#">
+                            <img />
+                        </a>
+                        <div class="content">
+                            <h2>User Name</h2>
+                            <p>
+                                100 pts
+                            </p>
+                        </div>
+                    </li>
+                    <li class="person">
+                        <a href="#">
+                            <img />
+                        </a>
+                        <div class="content">
+                            <h2>User Name</h2>
+                            <p>
+                                100 pts
+                            </p>
+                        </div>
+                    </li>
+                    <li class="person">
+                        <a href="#">
+                            <img />
+                        </a>
+                        <div class="content">
+                            <h2>User Name</h2>
+                            <p>
+                                100 pts
+                            </p>
+                        </div>
+                    </li>
+                    <li class="person">
+                        <a href="#">
+                            <img />
+                        </a>
+                        <div class="content">
+                            <h2>User Name</h2>
+                            <p>
+                                100 pts
+                            </p>
+                        </div>
+                    </li>
+                    <li class="person">
+                        <a href="#">
+                            <img />
+                        </a>
+                        <div class="content">
+                            <h2>User Name</h2>
+                            <p>
+                                100 pts
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9 board">
+                <div class="row">
+                    <canvas id="canvas" width="500" height="500"></canvas>
+                </div>
+                <div class="row menu">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 chatContainer">
+        <div class="chatbox"></div>
+
+        <form name="message" class="messageForm" action="">
+            <input name="msg" type="text" id="msg" class="msg" />
+            <input name="send" type="button" id="send" class="send" value="Send" />
+        </form>
+
+    </div>
+</div>
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/jquery.signalR-2.0.2.min.js")"></script>
+    <script src="@Url.Content("~/signalr/hubs")"></script>
+    <script src="@Url.Content("~/Scripts/app/pictionaryHub.js")"></script>
+    <script type="text/javascript">
+        $.connection.hub.start();
+    </script>
+}

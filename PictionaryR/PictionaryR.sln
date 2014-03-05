@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictionaryR", "PictionaryR\PictionaryR.csproj", "{06179058-10F2-454B-99E2-4348B56DE5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictionaryR.Tests", "PictionaryR.Tests\PictionaryR.Tests.csproj", "{9BCE6D4C-C368-4D84-BA9E-8D4F07DA3BC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06179058-10F2-454B-99E2-4348B56DE5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06179058-10F2-454B-99E2-4348B56DE5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06179058-10F2-454B-99E2-4348B56DE5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06179058-10F2-454B-99E2-4348B56DE5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCE6D4C-C368-4D84-BA9E-8D4F07DA3BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCE6D4C-C368-4D84-BA9E-8D4F07DA3BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCE6D4C-C368-4D84-BA9E-8D4F07DA3BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCE6D4C-C368-4D84-BA9E-8D4F07DA3BC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
