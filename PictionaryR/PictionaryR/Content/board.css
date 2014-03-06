@@ -3,11 +3,9 @@
     margin: 0;
     -webkit-border-radius: 0px 15px 15px 0px;
     border-radius: 0px 15px 15px 0px;
-    /*cursor: url("Icons/pencil1.png"), auto;*/
 }
 
     .board canvas {
-        /*cursor: url("Icons/pencil1.png"), auto;*/
     }
 
     .board .menu {
@@ -16,7 +14,12 @@
         bottom:0;
         left:0;
         width:100%;
-        background: lightblue;
+        //background: lightblue;
         border-radius: 0px 0px 15px 0px;
         margin:0;
+        border-top: 1px solid black;
+    }
+
+    .board canvas {
+        
     }

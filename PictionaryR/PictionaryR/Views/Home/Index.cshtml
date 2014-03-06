@@ -61,8 +61,8 @@
                 </ul>
             </div>
             <div class="col-md-9 board">
-                <div class="row">
-                    <canvas id="canvas" width="500" height="500"></canvas>
+                <div class="row" style="height:508px">
+                    <canvas id="canvas" width="1000" height="2000"></canvas>
                 </div>
                 <div class="row menu">
 
@@ -77,9 +77,10 @@
             <input name="msg" type="text" id="msg" class="msg" />
             <input name="send" type="button" id="send" class="send" value="Send" />
         </form>
-
     </div>
 </div>
+
+
 
 @section scripts{
     <script src="@Url.Content("~/Scripts/jquery.signalR-2.0.2.min.js")"></script>
@@ -87,5 +88,67 @@
     <script src="@Url.Content("~/Scripts/app/pictionaryHub.js")"></script>
     <script type="text/javascript">
         $.connection.hub.start();
+
+        var canvas = $('canvas'),
+		    context = canvas[0].getContext('2d'),
+		    lastpoint = null,
+		    painting = false,
+		    myturn = true;
+
+        function draw(line) {
+            context.lineJoin = 'round';
+            context.lineWidth = 2;
+            context.strokeStyle = line.color;
+            context.beginPath();
+
+            if (line.from) {
+                context.moveTo(line.from.x, line.from.y);
+            } else {
+                context.moveTo(line.to.x - 1, line.to.y);
+            }
+
+            context.lineTo(line.to.x, line.to.y);
+            context.closePath();
+            context.stroke();
+        }
+
+        // Disable text selection on the canvas
+        canvas.mousedown(function (e) {
+            if (e && e.preventDefault) {
+                e.preventDefault();
+            }
+            else {
+                window.event.returnValue = false;
+            }
+            
+            if (myturn) {
+                painting = true;
+                var newpoint = { x: e.pageX  - canvas.offset().left , y: e.pageY - canvas.offset().top  },
+                    line = { from: null, to: newpoint, color: "#000" };
+
+                draw(line);
+                lastpoint = newpoint;
+            }
+            return false;
+        });
+
+        canvas.mousemove(function (e) {
+            if (myturn && painting) {
+                var newpoint = { x: e.pageX - canvas.offset().left, y: e.pageY - canvas.offset().top },
+                    line = { from: lastpoint, to: newpoint, color: "#000" };
+
+                draw(line);
+                lastpoint = newpoint;
+            }
+        });
+
+        canvas.mouseout(function (e) {
+            painting = false;
+        });
+
+        canvas.mouseup(function (e) {
+            painting = false;
+        });
+
     </script>
 }
