@@ -54,11 +54,11 @@ a {
 }
 
 .principal {
-    border-radius: 15px;
     -webkit-border-radius: 15px;
+    border-radius: 15px;
     border: 1px solid black;
-    background:lightgray;
+    background: lightblue;
     padding: 0 0 0 5px;
-    margin-right:2px;
+    margin-right: 2px;
     box-shadow: 3px 5px 5px lightgray;
 }

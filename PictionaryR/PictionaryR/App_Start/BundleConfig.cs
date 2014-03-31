@@ -26,6 +26,15 @@ namespace PictionaryR
                       "~/Content/chat.css",
                       "~/Content/user-list.css",
                       "~/Content/board.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-app-controllers").IncludeDirectory(
+                    "~/Scripts/app/controllers", "*.js", true));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-app-directives").IncludeDirectory(
+                      "~/Scripts/app/directives", "*.js", true));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular-app-services").IncludeDirectory(
+                      "~/Scripts/app/services", "*.js", true));
         }
     }
 }

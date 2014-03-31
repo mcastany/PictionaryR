@@ -1,25 +1,91 @@
 ﻿.board {
     background: white;
     margin: 0;
-    -webkit-border-radius: 0px 15px 15px 0px;
-    border-radius: 0px 15px 15px 0px;
+    -webkit-border-radius: 0 15px 15px 0;
+    border-radius: 0 15px 15px 0;
 }
 
     .board canvas {
+        border-top-right-radius: 15px;
     }
 
     .board .menu {
-        height:30px;
-        position:absolute;
-        bottom:0;
-        left:0;
-        width:100%;
-        //background: lightblue;
-        border-radius: 0px 0px 15px 0px;
-        margin:0;
+        height: 65px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: lightblue;
+        border-radius: 0 0 15px 0;
+        margin: 0;
         border-top: 1px solid black;
     }
 
-    .board canvas {
-        
+.toolbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0;
+    margin: 0;
+    z-index: 4;
+}
+
+    .toolbar li {
+        display: inline-block;
+        list-style: none;
+        margin-right: 10px;
+        border: 2px solid #000;
+        background-color: #d9dadb;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        cursor: pointer;
     }
+
+        .toolbar li:hover {
+            border: 4px solid #000;
+        }
+
+
+.sprite {
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(Images/drawpad.png);
+}
+
+.draw {
+    width: 46px;
+    height: 47px;
+    background-position: -222px -2px;
+}
+
+.line {
+    width: 46px;
+    height: 47px;
+    background-position: -178px -2px;
+}
+
+.save {
+    width: 46px;
+    height: 47px;
+    background-position: -134px -2px;
+}
+
+.share {
+    width: 46px;
+    height: 47px;
+    background-position: -90px -2px;
+}
+
+.trash {
+    width: 46px;
+    height: 47px;
+    background-position: -46px -2px;
+}
+
+.type {
+    width: 46px;
+    height: 47px;
+    background-position: -2px -2px;
+}
